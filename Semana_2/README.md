@@ -1,88 +1,72 @@
-﻿# ⛩️ Kensei Projetos ⛩️
+﻿﻿# ⛩️ Kensei Lab: Operações em Python ⛩️
 
-```text
-██╗  ██╗███████╗███╗   ██╗███████╗███████╗██╗
-██║ ██╔╝██╔════╝████╗  ██║██╔════╝██╔════╝██║
-█████╔╝ █████╗  ██╔██╗ ██║███████╗█████╗  ██║
-██╔═██╗ ██╔══╝  ██║╚██╗██║╚════██║██╔══╝  ██║
-██║  ██╗███████╗██║ ╚████║███████║███████╗██║
-╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝
-```
-
-> `kensei_projetos` // Experimental Lab: **Cybersecurity** | **AI** | **Data Ops**
-> status: `active_development`
+Este repositório contém uma coleção de scripts desenvolvidos para o laboratório **Kensei**, focados em automação, lógica de programação e fundamentos de cybersecurity. Cada módulo foi construído seguindo princípios de **Clean Architecture** e interface via terminal com estética hacker.
 
 ---
 
-## [ 01. SYSTEM_GOAL ]
+## 📂 Estrutura de Módulos
 
-*   **Objective:** Construir PoCs (Proof of Concept) e automações de alto nível.
-*   **Focus:** Convergência entre `Artificial Intelligence`, `Data Observation` e `Secure Automation`.
-*   **Outcome:** Ambiente modular para simulações de elite em cibersegurança.
+### 1. 📂 Organizador de Arquivos (`file_organizer.py`)
+Módulo de automação que realiza a triagem de diretórios bagunçados.
+*   **Funcionalidade:** Varre uma pasta e move arquivos para subpastas específicas (Imagens, Docs, Vídeos, etc.) baseando-se na extensão.
+*   **Destaque:** Gera um log final detalhando quantos arquivos foram movidos por categoria.
+*   **Tecnologias:** `os`, `shutil`.
+
+### 2. 🔐 Gerador de Senhas (`password_generator.py`)
+Ferramenta para criação de chaves de acesso seguras.
+*   **Funcionalidade:** Permite escolher o tamanho e a complexidade (Maiúsculas, Números, Símbolos).
+*   **Destaque:** Gera um lote de 5 senhas de uma vez e as exporta para um arquivo `senhas.txt` com carimbo de data/hora (timestamp).
+*   **Tecnologias:** `random`, `string`, `datetime`.
+
+### 3. 🛡️ Cyber Quiz (`cyber_quiz.py`)
+Simulador de avaliação de conhecimentos em segurança da informação.
+*   **Funcionalidade:** 5 perguntas aleatórias sobre ataques e defesas com sistema de pontuação.
+*   **Destaque:** Implementa um **Timer de 20 segundos** por pergunta usando Threads. Se o tempo esgotar, a questão é invalidada.
+*   **Tecnologias:** `threading`, `random`, `sys`.
+
+### 4. 📝 Lista de Compras (`shopping_list.py`)
+Gerenciador simples de inventário ou tarefas.
+*   **Funcionalidade:** Adicionar, visualizar e remover itens através de um menu interativo.
+*   **Destaque:** Sincronização automática com arquivo `lista_compras.txt` ao encerrar o programa.
+*   **Tecnologias:** Manipulação de Listas, I/O de arquivos.
+
+### 5. 🌡️ Conversor Térmico (`celsius_to_fahrenheit.py`)
+Calculadora de precisão para escalas de temperatura.
+*   **Funcionalidade:** Conversão bidirecional entre Celsius e Fahrenheit.
+*   **Destaque:** Validação rigorosa contra valores abaixo do **Zero Absoluto** e tratamento de erros para entradas não numéricas.
+*   **Tecnologias:** Lógica matemática, `try-except`.
+
+### 6. 👋 Hello User (`hello_user.py`)
+Script de boas-vindas e validação inicial.
+*   **Funcionalidade:** Solicita o nome do operador e retorna uma saudação formatada.
+*   **Destaque:** Validação de comprimento mínimo de caracteres para garantir integridade dos dados.
 
 ---
 
-## [ 02. REPO_MODULES ]
-
-*   `⚡` **Exploits & PoCs:** Automações inteligentes para validação de segurança.
-*   `🔍` **Data Analytics:** Scripts para detecção de anomalias e extração de insights.
-*   `🛠️` **SecTools:** Ferramentas customizadas para exploração controlada.
-*   `🏗️` **Clean Architecture:** Estrutura modular preparada para escalabilidade e deploy.
-
----
-
-## [ 03. TECH_STACK ]
-
-*   **Languages:** `Python`, `Bash`, `PowerShell`
-*   **AI/ML:** `LLMs`, `NLP Models`, `OpenAI API`
-*   **Eng:** `ETL Pipelines`, `Data Observability`
-*   **Ops:** `API Integrations`, `Task Automation`
+## 🎨 Padrões Visuais
+Todos os scripts utilizam códigos ANSI para estilização do terminal:
+*   **Verde (`GREEN`):** Sucesso e Operações Concluídas.
+*   **Ciano (`CYAN`):** Inputs e Prompts do Usuário.
+*   **Vermelho (`RED`):** Alertas de Segurança e Erros.
+*   **Negrito (`BOLD`):** Títulos e Destaques.
 
 ---
 
-## [ 04. REPO_HIGHLIGHTS ]
+## 🚀 Como Executar
 
-*   `[x]` UI/UX com estética hacker e visualização de dados com propósito.
-*   `[x]` Código otimizado para demonstrações ao vivo (Demo Ready).
-*   `[x]` Estrutura expansível para pesquisadores de IA e Cyber.
-
----
-
-## [ 05. DEPLOYMENT ]
-
-1. **Initialize Environment:**
-
+1. Certifique-se de ter o **Python 3.x** instalado.
+2. Navegue até a pasta do projeto.
+3. Execute o script desejado:
    ```bash
-   git clone https://github.com/denissoncastro/kensei_projetos.git
-   cd kensei_projetos
+   python nome_do_arquivo.py
    ```
 
-2. **Dependencies (If applicable):**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Execute:**
-   `python main.py` ou navegue pelos módulos internos.
-
 ---
 
-## [ 06. MISSION_LOG ]
+## 🛡️ Missão do Lab
+> "Transformar lógica pura em ferramentas de automação seguras e eficientes."
 
-Utilize este laboratório para:
-*   Demonstrar visão de **automação inteligente**.
-*   Discutir o papel da IA em operações ofensivas/defensivas.
-*   Validar o potencial de arquiteturas modulares.
-
-`Keep it stealthy. Keep it smart.`
-
----
-
-## Contato
-
-- Autor: **Denisson Castro**
-- GitHub: `https://github.com/denissoncastro`
-- Projeto: `https://github.com/denissoncastro/kensei_projetos`
+**Desenvolvido por:** Denisson Castro
+**Projeto:** Kensei Lab
 
 `Keep it stealthy. Keep it smart.`
